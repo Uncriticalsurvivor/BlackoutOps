@@ -1,0 +1,171 @@
+{
+  "id": "op_black_ridge",
+  "name": "Operation Black Ridge",
+  "description": "Alpha and Bravo companies must coordinate to secure the Black Ridge mountain pass before hostile forces consolidate their hold on the high-altitude chokepoint. Communications in the region are heavily jammed due to terrain masking and electronic warfare.",
+  "duration_minutes": 15,
+  "roles": ["alpha_lead", "bravo_lead"],
+  "role_labels": {
+    "alpha_lead": "Alpha Lead (Capt. Reyes)",
+    "bravo_lead": "Bravo Lead (Capt. Osei)"
+  },
+  "map": {
+    "center": [36.5, 74.2],
+    "zoom": 13,
+    "markers": [
+      {
+        "id": "m_pass",
+        "latlng": [36.512, 74.205],
+        "label": "Black Ridge Pass",
+        "color": "#e74c3c",
+        "icon": "flag"
+      },
+      {
+        "id": "m_alpha_fob",
+        "latlng": [36.490, 74.170],
+        "label": "Alpha FOB",
+        "color": "#2ecc71",
+        "icon": "shield"
+      },
+      {
+        "id": "m_bravo_fob",
+        "latlng": [36.530, 74.195],
+        "label": "Bravo FOB",
+        "color": "#3498db",
+        "icon": "shield"
+      },
+      {
+        "id": "m_cp_north",
+        "latlng": [36.545, 74.220],
+        "label": "Checkpoint North",
+        "color": "#f39c12",
+        "icon": "circle"
+      },
+      {
+        "id": "m_ridge_east",
+        "latlng": [36.508, 74.240],
+        "label": "Ridge East Observation Post",
+        "color": "#9b59b6",
+        "icon": "eye"
+      },
+      {
+        "id": "m_supply_route",
+        "latlng": [36.475, 74.190],
+        "label": "Supply Route Kilo",
+        "color": "#1abc9c",
+        "icon": "truck"
+      }
+    ]
+  },
+  "messages": [
+    {
+      "id": "msg_001",
+      "at_seconds": 30,
+      "to": ["alpha_lead", "bravo_lead"],
+      "category": "INTEL",
+      "text": "SIGINT confirms hostile element of approximately 2 platoons moving north along the eastern ridge towards the pass. ETA to pass: 40 minutes.",
+      "conflicting_variant": "SIGINT inconclusive. Possible civilian movement detected near eastern ridge. No confirmed hostile element at this time.",
+      "outdated_variant": "Earlier SIGINT sweep (6 hours ago) showed no hostile activity in the eastern ridge sector. This report may be stale."
+    },
+    {
+      "id": "msg_002",
+      "at_seconds": 90,
+      "to": ["alpha_lead"],
+      "category": "ORDERS",
+      "text": "Alpha Lead: Advance your element to seize and hold Black Ridge Pass. Do NOT engage without positive identification. Rules of Engagement: YELLOW.",
+      "conflicting_variant": "Alpha Lead: Hold current position. Bravo will take the pass. Your mission is flank security on Route Kilo.",
+      "outdated_variant": "Alpha Lead: This order supersedes previous. Original plan called for Alpha to hold the FOB — confirm new orders with HQ."
+    },
+    {
+      "id": "msg_003",
+      "at_seconds": 90,
+      "to": ["bravo_lead"],
+      "category": "ORDERS",
+      "text": "Bravo Lead: Establish blocking position at Checkpoint North. Prevent hostile forces from bypassing the pass to the north. Coordinate with Alpha.",
+      "conflicting_variant": "Bravo Lead: Move to seize the pass directly. Alpha is providing flank cover on Route Kilo. Do not wait.",
+      "outdated_variant": "Bravo Lead: Earlier orders had Bravo in a reserve role. New orders are pending confirmation — use judgement."
+    },
+    {
+      "id": "msg_004",
+      "at_seconds": 180,
+      "to": ["alpha_lead", "bravo_lead"],
+      "category": "SITREP",
+      "text": "Observation Post Ridge East reports: 2 vehicles (technical-type) plus 15–20 dismounts confirmed at grid 74.238, 36.509. Moving west. Rate of advance is fast.",
+      "conflicting_variant": "Observation Post Ridge East reports: No visual contact with hostile forces. Possible false alarm — earlier report may have been friendly elements returning from patrol.",
+      "outdated_variant": "NOTE: This report was logged 25 minutes ago. Current situation at Ridge East is unknown — OP may have lost comms."
+    },
+    {
+      "id": "msg_005",
+      "at_seconds": 300,
+      "to": ["alpha_lead"],
+      "category": "LOGISTICS",
+      "text": "Supply Route Kilo is OPEN. Resupply convoy with ammunition and medical stores will reach your position in 15 minutes.",
+      "conflicting_variant": "Supply Route Kilo is CLOSED due to IED threat. No resupply possible at this time. Manage current stores.",
+      "outdated_variant": "Earlier report confirmed Kilo was open, but convoy has not departed yet — departure depends on route clearance currently ongoing."
+    },
+    {
+      "id": "msg_006",
+      "at_seconds": 360,
+      "to": ["bravo_lead"],
+      "category": "INTEL",
+      "text": "HUMINT source reports a second hostile group of unknown size moving around the northern flank towards Checkpoint North. May attempt to bypass the pass entirely.",
+      "conflicting_variant": "HUMINT source now reports the northern flanking movement was a decoy. Main effort is directly through the pass.",
+      "outdated_variant": "This HUMINT was obtained 2 hours ago and has not been corroborated. Treat with caution."
+    },
+    {
+      "id": "msg_007",
+      "at_seconds": 480,
+      "to": ["alpha_lead", "bravo_lead"],
+      "category": "COMMAND",
+      "text": "HQ to all elements: ROE upgraded to RED. Positive identification confirmed on hostile forces. You are authorised to engage. Coordinate fires to avoid fratricide.",
+      "conflicting_variant": "HQ to all elements: DO NOT upgrade ROE. Political situation is sensitive — maintain YELLOW. Engage only if directly fired upon.",
+      "outdated_variant": "This ROE change message is a re-transmission of an earlier instruction. Verify current ROE with HQ — comms have been unreliable."
+    },
+    {
+      "id": "msg_008",
+      "at_seconds": 600,
+      "to": ["alpha_lead"],
+      "category": "SITREP",
+      "text": "Alpha element reports: Lead section is 300m south of the pass, taking sporadic small-arms fire from the east. 1 casualty (minor). Requesting permission to suppress and advance.",
+      "conflicting_variant": "Alpha element reports: No contact at this time. Moving steadily to the pass without incident.",
+      "outdated_variant": "This sitrep was logged 10 minutes ago — Alpha's lead section may have already advanced or pulled back."
+    },
+    {
+      "id": "msg_009",
+      "at_seconds": 660,
+      "to": ["bravo_lead"],
+      "category": "SITREP",
+      "text": "Bravo element at Checkpoint North: Hostile probing attack repelled. 3 enemy KIA confirmed. Requesting reinforcement — element is under strength.",
+      "conflicting_variant": "Bravo element at Checkpoint North: Position secure, no enemy contact. Standing by as ordered.",
+      "outdated_variant": "Earlier sitrep from Bravo indicated the checkpoint was under heavy pressure. Current status unknown — comms intermittent."
+    },
+    {
+      "id": "msg_010",
+      "at_seconds": 780,
+      "to": ["alpha_lead", "bravo_lead"],
+      "category": "COMMAND",
+      "text": "HQ: Both elements are to consolidate at Black Ridge Pass by T+15. Extraction is scheduled. Do not over-extend. Report final status.",
+      "conflicting_variant": "HQ: Mission timeline extended by 30 minutes due to developing situation. Continue operations. Extraction pushed back.",
+      "outdated_variant": "This consolidation order was issued before the current contact developed. Confirm with HQ whether the timeline still stands."
+    }
+  ],
+  "decision_points": [
+    {
+      "id": "dp_001",
+      "at_seconds": 240,
+      "prompt": "Based on current intel, do you advance to seize the pass immediately or hold and wait for Bravo to confirm the northern flank?",
+      "for_roles": ["alpha_lead"]
+    },
+    {
+      "id": "dp_002",
+      "at_seconds": 420,
+      "prompt": "HUMINT reports a northern bypass attempt. Do you reinforce Checkpoint North, hold your position, or request Alpha to split their element?",
+      "for_roles": ["bravo_lead"]
+    },
+    {
+      "id": "dp_003",
+      "at_seconds": 630,
+      "prompt": "ROE status is uncertain. Alpha is under fire. Do you authorise suppression and advance, pull Alpha back, or wait for HQ confirmation?",
+      "for_roles": ["alpha_lead", "bravo_lead"]
+    }
+  ]
+}
