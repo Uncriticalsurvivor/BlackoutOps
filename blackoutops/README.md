@@ -5,7 +5,7 @@
 
 Built for Smart India Hackathon 2026, problem statement **SIH26248**.
 
-**Demo video:** ADD_VIDEO_LINK_HERE
+**Demo video:** https://youtu.be/vZ8tW2CmqDY
 
 > BlackoutOps is a decision-practice training aid. It is not a replacement for field exercises and not a prediction tool. All scenarios are generic and unclassified.
 
